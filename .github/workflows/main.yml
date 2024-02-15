@@ -13,13 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Docker Compose
-      run: docker-compose up -d
-
     - name: Build and Run docker-compose services
       run: |
-        docker-compose build
-        docker-compose up -d
+        docker-compose up -d --build
 
     - name: Check running services
       run: docker-compose ps
@@ -42,9 +38,10 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
-    - name: Push image to Docker Hub Container Registry
+    - name: Tag and Push image to Docker Hub Container Registry
       run: | 
-        docker-compose push $REPO_NAME/$IMAGE_NAME
+        docker tag $REPO_NAME/$IMAGE_NAME $REPO_NAME/$IMAGE_NAME:latest
+        docker push $REPO_NAME/$IMAGE_NAME:latest
 
     - name: Cleanup
       run: docker-compose down
