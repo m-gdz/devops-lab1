@@ -38,7 +38,7 @@ class Student(Model):
             'student_id': 'student_id',
             'first_name': 'first_name',
             'last_name': 'last_name',
-            'grad_records': 'gradRecords'
+            'grade_records': 'gradeRecords'
         }
         self._student_id = student_id
         self._first_name = first_name
