@@ -18,6 +18,8 @@ swagger_server/models/__init__.py
 swagger_server/models/base_model_.py
 swagger_server/models/grade_record.py
 swagger_server/models/student.py
+swagger_server/service/__init__.py
+swagger_server/service/student_service.py
 swagger_server/swagger/swagger.yaml
 swagger_server/test/__init__.py
 swagger_server/test/test_default_controller.py
