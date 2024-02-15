@@ -38,10 +38,9 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
-    - name: Tag and Push image to Docker Hub Container Registry
+    - name: Push image to docker hub Container Registry
       run: | 
-        docker tag $REPO_NAME/$IMAGE_NAME $REPO_NAME/$IMAGE_NAME:latest
-        docker push $REPO_NAME/$IMAGE_NAME:latest
+          docker push $REPO_NAME/$IMAGE_NAME
 
     - name: Cleanup
       run: docker-compose down
