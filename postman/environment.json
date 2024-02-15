@@ -4,7 +4,7 @@
 	"values": [
 		{
 			"key": "baseUrl",
-			"value": "http://172.17.0.2:8080/tutorial/1.0.0/",
+			"value": "http://localhost:8080/tutorial/1.0.0/",
 			"enabled": true
 		},
 		{
