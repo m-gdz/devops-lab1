@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: swagger-server
+Version: 1.0.0
+Summary: Simple Inventory API
+Home-page: 
+Author-email: you@your-company.com
+Keywords: Swagger,Simple Inventory API
+Requires-Dist: connexion
+Requires-Dist: swagger-ui-bundle>=0.0.2
+
+    This is a simple API
+    
