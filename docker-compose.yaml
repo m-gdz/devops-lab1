@@ -4,7 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: "${REPO_NAME}/${IMAGE_NAME}:latest"
     restart: unless-stopped
     depends_on:
       - mongo
